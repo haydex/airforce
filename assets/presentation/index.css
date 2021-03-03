@@ -148,6 +148,79 @@ textarea {
 
 }
 
+/** Side Bar **/
+
+div#sideBar {
+
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    overflow-y: scroll;
+    padding: 50px;
+    font-size: 20px;
+    border-right: 2px solid var(--greyishLight2);
+    background-color:var(--whitish);
+    z-index: 20000;
+
+}
+
+div#sideBar div.sideBarOptions select#dataSelect {
+
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid var(--blueishDark);
+    cursor: pointer;
+    outline: 0px;
+    color: var(--blueishDark);
+    font-size: 20px;
+    padding: 5px 5px;
+
+}
+
+div#sideBar div.sideBarOptions {
+
+    margin-bottom: 80px;
+
+}
+
+div#sideBar div.sideBarOptions p {
+
+    font-size: 29px;
+    font-weight: 800;
+    margin-bottom: 15px;
+
+}
+
+div#sideBar div.sideBarOptions ul.sideBarOptionsList li {
+
+    padding: 5px 0px;
+    border-radius: 10px;
+    margin-bottom: 2px;
+
+}
+
+div#sideBar div.sideBarOptions ul.sideBarOptionsList li span {
+
+    padding: 5px 10px;
+    border-radius: 10px;
+
+}
+
+div#sideBar div.sideBarOptions ul.sideBarOptionsList li span:hover {
+
+    background-color: var(--greyishLight2);
+    cursor: pointer;
+
+}
+
+div#sideBar div.sideBarOptions ul.sideBarOptionsList li.selected span {
+
+    color: var(--whitish);
+    background-color: var(--blueishDark);
+
+}
+
 /** Search **/
 
 form#search {

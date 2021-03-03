@@ -42,6 +42,46 @@
     </head>
     <body>
         
+        <!-- Side Bar -->
+        <div id="sideBar">
+            <div id="data" class="sideBarOptions">
+                <p id="dataLabel">Data</p>
+                <select id="dataSelect" name="dataSelect">
+                    <option value="playlist1">Playlist 1</option>
+                    <option value="playlist2">Playlist 2</option>
+                    <option value="playlist3">Playlist 3</option>
+                    <option value="playlist4">Playlist 4</option>
+                </select>
+            </div>
+
+            <div id="dimensions" class="sideBarOptions">
+                <p id="dimensionsLabel">Dimensions</p>
+                <ul id="dimensionsList" class="sideBarOptionsList">
+                    <li id="movieBarcodeDimention" class="selected"><span>Movie Barcode</span></li>
+                    <li id="topicModelingDimention"><span>Topic Modeling</span></li>
+                    <li id="toxicityFeaturesDimention"><span>Toxicity Features</span></li>
+                    <li id="emotionFeaturesDimention"><span>Emotion Features</span></li>
+                    <li id="networkClustersDimention"><span>Network Clusters</span></li>
+                    <li id="videoCategorizationDimention"><span>Video Categorization</span></li>
+                    <li id="organicInorganicAnalysisDimention"><span>Organic/Inorganic Analysis</span></li>
+                    <li id="topicDiversityAndPeriodicityDimention"><span>Topic Diversity & Periodicity</span></li>
+                </ul>
+            </div>
+
+            <div id="visualization" class="sideBarOptions">
+                <p id="visualizationLabel">Visualization</p>
+                <ul id="visualizationList" class="sideBarOptionsList">
+                    <li id="twoDClusterResultsVisualization" class="selected"><span>2D Cluster Results</span></li>
+                    <li id="threeDClusterResultsVisualization"><span>3D Cluster Results</span></li>
+                    <li id="TSNEVisualization"><span>T-SNE</span></li>
+                    <li id="hierarchicalClusteringDendogramVisualization"><span>Hierarchical Clust. Dendo.</span></li>
+                    <li id="networkCommunitiesVisualization"><span>Network Communities</span></li>
+                    <li id="treemapVisualization"><span>Treemap</span></li>
+                    <li id="topicModelingResultsVisualization"><span>Topic Modeling Results</span></li>
+                </ul>
+            </div>
+        </div>
+
         <!-- Search -->
         <form id="search">
             <label for="searchBox">Search Website</label>

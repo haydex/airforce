@@ -49,6 +49,9 @@ document.addEventListener("DOMContentLoaded", function() {
             this.notificationsCounter = document.querySelector("section#notifications span#counter");
             this.editKeywordsButton = document.querySelector("section#notifications button#editKeywords");
             this.cancelEditingButton = document.querySelector("section#notifications button#cancelEditing");
+
+            this.sideBar = document.querySelector("div#sideBar");
+
             this.narrativeEditButton = "editButton";
             this.narrativeConfirmButton = "confirmButton";
             this.narrativeCancelButton = "cancelButton";
@@ -75,6 +78,8 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
         initialize() {
+
+            this.sideBar.addEventListener("click", this.sideBarClickListener.bind(this));
 
             for (let i = 0; i < this.removeKeyword.length; i++) {
 
@@ -131,6 +136,24 @@ document.addEventListener("DOMContentLoaded", function() {
             document.addEventListener("keydown", this.escapeKeyListener.bind(this));
             this.cancelEditingButton.addEventListener("click", this.cancelEditingButtonClickListener.bind(this));
             this.editKeywordsButton.addEventListener("click", this.editKeywordsButtonClickListener.bind(this));
+
+        }
+
+        sideBarClickListener(event) {
+
+            if (event.target.parentNode.parentNode.classList.contains("sideBarOptionsList")) {
+
+                var listItems = event.target.parentNode.parentNode.querySelectorAll("li");
+
+                for (var i=0; i < listItems.length; i++) {
+
+                    listItems[i].classList.remove(this.selectedClass);
+
+                } 
+
+                event.target.parentNode.classList.add(this.selectedClass);
+
+            }
 
         }
 
