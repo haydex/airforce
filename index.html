@@ -46,17 +46,17 @@
         <div id="sideBar">
             <div id="data" class="sideBarOptions">
                 <p id="dataLabel">Data</p>
-                <select id="dataSelect" name="dataSelect">
-                    <option value="playlist1">Playlist 1</option>
-                    <option value="playlist2">Playlist 2</option>
-                    <option value="playlist3">Playlist 3</option>
-                    <option value="playlist4">Playlist 4</option>
-                </select>
+                <ul id="dataList" class="sideBarOptionsList multi">
+                    <li id="playlist1Data" class="selected"><span>Playlist 1</span></li>
+                    <li id="playlist2Data"><span>Playlist 2</span></li>
+                    <li id="playlist3Data"><span>Playlist 3</span></li>
+                    <li id="playlist4Data"><span>Playlist 4</span></li>
+                </ul>
             </div>
 
             <div id="dimensions" class="sideBarOptions">
                 <p id="dimensionsLabel">Dimensions</p>
-                <ul id="dimensionsList" class="sideBarOptionsList">
+                <ul id="dimensionsList" class="sideBarOptionsList multi">
                     <li id="movieBarcodeDimention" class="selected"><span>Movie Barcode</span></li>
                     <li id="topicModelingDimention"><span>Topic Modeling</span></li>
                     <li id="toxicityFeaturesDimention"><span>Toxicity Features</span></li>

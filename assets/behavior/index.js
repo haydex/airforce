@@ -143,15 +143,24 @@ document.addEventListener("DOMContentLoaded", function() {
 
             if (event.target.parentNode.parentNode.classList.contains("sideBarOptionsList")) {
 
-                var listItems = event.target.parentNode.parentNode.querySelectorAll("li");
+                if (event.target.parentNode.parentNode.classList.contains("multi")) {
 
-                for (var i=0; i < listItems.length; i++) {
+                    event.target.parentNode.classList.toggle(this.selectedClass);
 
-                    listItems[i].classList.remove(this.selectedClass);
+                } else {
 
-                } 
+                    var listItems = event.target.parentNode.parentNode.querySelectorAll("li");
 
-                event.target.parentNode.classList.add(this.selectedClass);
+                    for (var i = 0; i < listItems.length; i++) {
+
+                        listItems[i].classList.remove(this.selectedClass);
+
+                    }
+
+                    event.target.parentNode.classList.add(this.selectedClass);
+
+                }
+                
 
             }
 
