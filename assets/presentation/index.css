@@ -229,3 +229,10 @@ div#treemap {
     margin-left: 350px;
 
 }
+
+
+ul#visualizationList li.disabled {
+
+    opacity: 0.5;
+
+}
