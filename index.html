@@ -47,11 +47,12 @@
         <div id="myDiv" style="width:960px;height:650px; margin-left: 400px; margin-top: 30px;"></div>
         
         <script>
-            
+            var rows = {};
+
             d3.csv('/airforce/assets/data/data5.csv',
                 function(err, rows){
                     function unpack(rows, key) {
-                    return rows.map(function(row) { return row[key]});
+                        return rows.map(function(row) { return row[key]});
                     }
 
                     var data = [{
@@ -65,7 +66,7 @@
                             hovertemplate: "%{label} <extra>Count = %{value}</extra>",
                             parents: unpack(rows, 'parents')
                         }];
-
+                    
                     Plotly.newPlot('myDiv', data)
                 });
 
